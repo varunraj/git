@@ -166,3 +166,32 @@ Good practice to pull remote before push if remote is shared.
 
 GitHub Repo branches
 ==================== 
+
+
+Pull with Rebase
+----------------
+
+It will rewind the changes from where it diverged from master. Then commit the master changes
+to local branch and then add the branch changes on top of it.
+
+- make remote changes and commit
+- make local change and commit on same branch
+
+- git fetch 
+- git status -> we can see branch is diverged. and asking to pull the changes locally
+- git pull --rabase - > it will rewind local changes. Then merge remote changes and then add local changes again.
+
+graph
+====
+
+See branch graph locally.
+
+- git log --oneline --graph
+
+
+Development Branch
+==================
+in some worflows, we dont actively merge back to main since that represents current production. In this case
+we create a dev branch and make that as default. Once it is production grade, we will merge to master.
+
+- Create a develop branch in github. Make that as default from settings.
