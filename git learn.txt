@@ -138,6 +138,31 @@ git reset <commid id> --soft => least destructive. Head will be moved to the com
                              || we can backout changes from here.
 
 git reset <commid id> --mixed => Head is moved all files in wd.
-git reset <commid id> --hard  => this will revert repo to the commit and all changes will be gone from that commit.
+git reset <commid id> --hard  => this will revert repo to the commit. WE can come back to latest commit again by moving head.
 
 
+Remote Repo :
+============
+- get clone <remote repo> <local folder> => clone and set remote
+- git push origin main => send changes to remote
+- git push => by default send to origin main branch
+
+Fetch and Pull
+-------------
+
+Make a change in remote repo. Then make changes to local and commit
+If you commit now, it will be rejected with a message to 'fetch' first.
+
+
+- We need to fetch the change and merge or we can pull which does both at once.
+
+- git fetch = > bring the remote chages to local.
+- git status => show the mismatch between local and remote.
+- git pull or merge -> merge remote changes to local.
+- git push -> send local changes to remote.
+
+Good practice to pull remote before push if remote is shared.
+
+
+GitHub Repo branches
+==================== 
