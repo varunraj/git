@@ -195,3 +195,23 @@ in some worflows, we dont actively merge back to main since that represents curr
 we create a dev branch and make that as default. Once it is production grade, we will merge to master.
 
 - Create a develop branch in github. Make that as default from settings.
+
+Tags:
+====
+tags are ways to create tags in branch history. Mainly done for releases.
+
+git log --oneline -> get history of commits
+git tag -a v0.1-alpha -m "Release 0.1 (Alpha)" <commid id> => Created a tag for a commit in from history.
+git tag stable main -> quick tag to mark the latest commit on main brach as stable
+git tag unstable develop -> quick tag to mark the latest commit on develop brach as unstable
+
+git push origin stable - send stable tags to github.
+
+We can see the stable tag in git release/tag section in github with an option to downnload the code at that commit point.
+
+git push --tags = > send all tags 
+git tag - f <tag name> <new commit id > -> move tags to another commit id.
+git push --force origin unstable -> send the updated tag to github
+
+
+
